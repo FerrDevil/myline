@@ -8,7 +8,7 @@ export const VideoBackground = styled.video`
     position: absolute;
     object-fit: cover;
     margin: auto;
-    z-index: -2;
+    z-index: -1000;
     user-select: none;
     pointer-events: none;
 `

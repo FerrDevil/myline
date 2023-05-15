@@ -2,11 +2,12 @@
 import styled from "styled-components"
 
 export const NavigationWrapper = styled.nav`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    --height: 60px;
+    display: grid;
+    grid-template-columns: var(--height) 1fr;
+    grid-template-rows: 1fr;
     width: 100%;
-    height: 60px;
-    background-color: #2e3441;
+    height: var(--height);
+    background-color: var(--color-main-gray);
     isolation: isolate;
 `

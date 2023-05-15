@@ -1,31 +1,20 @@
 "use client"
 import { usePathname } from "next/navigation"
-import { NavigationLink, NavigationLinksWrapper } from "./styles"
+import { NavigationCategoryLinkSVG, NavigationHomeLinkSVG, NavigationLink, NavigationLinksWrapper } from "./styles"
+
+
 
 const NavigationLinks = () => {
     const pathname = usePathname()
-    
-
-    const availableLinks = [
-        {
-           link: "/",
-           title: "Главная",
-           image: "",
-        },
-        {
-            link: "/categories",
-            title: "Категории",
-            image: "",
-         }
-    ]
 
     return (
         <NavigationLinksWrapper>
-            {availableLinks.map((link, linkIndex) => (
-                <NavigationLink $isActive={link.link === pathname} key={linkIndex} href={link.link}>
-                    {link.title}
-                </NavigationLink>
-            ))}
+            <NavigationLink $isActive={"/" === pathname}  href="/">
+                <NavigationHomeLinkSVG/>
+            </NavigationLink>
+            <NavigationLink $isActive={"/categories" === pathname}  href="/categories">
+                <NavigationCategoryLinkSVG/>
+            </NavigationLink>
         </NavigationLinksWrapper>
     )
 }

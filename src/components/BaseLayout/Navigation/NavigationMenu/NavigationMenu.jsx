@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { NavigationMenuLink, NavigationMenuLinkTitle, NavigationMenuSidebar, NavigationMenuSidebarContent, NavigationMenuToggleButton, NavigationMenuWrapper } from "./styles"
+import { NavigationMenuLink, NavigationMenuLinkTitle, NavigationMenuSidebar, NavigationMenuSidebarContent, NavigationMenuToggleButton, NavigationMenuWrapper, NavigationMenuToggleButtonSVG } from "./styles"
 
 
 const NavigationMenu = () => {
@@ -8,7 +8,9 @@ const NavigationMenu = () => {
     const [isShown, setShown] = useState(false)
     return (
         <NavigationMenuWrapper>
-            <NavigationMenuToggleButton onClick={() => {setShown(prev => !prev)}}>menu</NavigationMenuToggleButton>
+            <NavigationMenuToggleButton onClick={() => {setShown(prev => !prev)}}>
+                <NavigationMenuToggleButtonSVG/>
+            </NavigationMenuToggleButton>
             <NavigationMenuSidebar $isShown={isShown}>
                 <NavigationMenuSidebarContent>
                     <NavigationMenuLink href="/" onClick={() => {setShown(false)}}>

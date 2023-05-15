@@ -1,17 +1,16 @@
-import { HeaderTitle, HeaderWrapper } from "./styles"
+import { HeaderLogo, HeaderLogoWrapper, HeaderTitle, HeaderWrapper } from "./styles"
 
 const Header = () => {
-    const titles = [
-        {
-            link: "",
-            title: "Главная"
-        }
-    ]
+    
     return(
         <HeaderWrapper>
+            <HeaderLogoWrapper>
+                <HeaderLogo/>
+            </HeaderLogoWrapper>
             <HeaderTitle>
-                {titles[0].title}
+                Программа Красивых Зубов
             </HeaderTitle>
+            <div></div>
         </HeaderWrapper>
     )
 }
