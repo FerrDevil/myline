@@ -45,7 +45,7 @@ export const NavigationMenuToggleButtonSVG = styled(MenuSVG)`
 
 
 export const NavigationMenuSidebar = styled.aside`
-    width: 250px;
+    width: 280px;
     position: absolute;
     left: 0;
     bottom: 100%;
@@ -59,17 +59,63 @@ export const NavigationMenuSidebar = styled.aside`
 
 export const NavigationMenuSidebarContent = styled.nav`
     display: grid;
-    padding: 20px;
+    
+    width: 100%;
 `
 
 
 export const NavigationMenuLink = styled(Link)`
     display: grid;
     grid-template-columns: 1fr;
-    width: 100%;
     cursor: pointer;
+    padding: 10px;
+    &:hover > span, &:focus-within > span{
+        color: #51CACD;
+    }
 `
 
 export const NavigationMenuLinkTitle = styled.span`
+    font-size: 20px;
+    color: #fff;
+`
+export const NavigationMenuLinkWrapper = styled.div`
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+`
+
+export const NavigationMenuRegisterLink = styled(Link)`
     font-size: 16px;
+    background-color: #61DAFB;
+    color: #404342;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+
+`
+
+export const NavigationMenuLoginLink = styled(Link)`
+    font-size: 16px;
+    border: 1px solid #61DAFB;
+    background-color: #404342;
+    color: #61DAFB;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+
+`
+
+export const NavigationMenuFooter = styled.footer`
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    margin-top: 40px;
+`
+
+export const NavigationMenuFooterText = styled.span`
+    font-size: 16px;
+    color: #fff;
 `

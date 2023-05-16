@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
     padding-inline: 20px;
     width: 100%;
     height: 60px;
-    background-image: linear-gradient( 90deg, #51CACD 0%, #73767E 50%);
+    background-image: linear-gradient( 90deg, #51CACD 0%, #61DAFB 50%);
     
 `
 export const HeaderLogoWrapper = styled.div`
@@ -32,5 +32,6 @@ export const HeaderLogo = styled(Image).attrs(() => ({
 export const HeaderTitle = styled.h1`
     font-size: 20px;
     font-weight: 700;
+    color: #F7F6F2;
     
 `
